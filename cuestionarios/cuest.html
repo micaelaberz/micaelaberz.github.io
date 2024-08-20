@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+	<head>
+    <meta charset="UTF-8">
+		<meta name="addsearch-category" content="Asesoramiento TI, programación"/>
+		<title>Ejercicios</title>
+</head>
+<body>
+<h1 style="align-content:center"> Preguntas y respuestas de cuestionarios</h1>
+<hr/>
+<section>
+    <h2>Referencias y sitios de interés</h2>
+    <nav>
+		<article>
+        <p>
+			<a href="https://www.godaddy.com/resources/es/seguridad/diferencia-entre-http-y-https" target="_blank">Protocolo HTTPS</a>
+			<br/>
+			<a href="https://developer.mozilla.org/es/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server" target="_blank">¿Qué es un servidor web?</a>
+		</p>
+    </article>
+	</nav>
+</section>
+<hr/>
+<section>
+    <h2>Seccion cuestionario 1 sobre encriptación</h2>
+    <ol>
+        <li>
+            <p>Plantear un caso de uso de encriptación unidireccional.</p>
+            <p>Encriptación de una contraseña.</p>
+        </li>
+        <li>
+            <p>¿Cuáles son las ventajas y las desventajas de la encriptación simétrica? </p>
+            <p>La ventaja es su eficiencia, y permite encriptar grandes cantidades de datos. Su desventaja es que tiene que encontrarse
+            un unico medio seguro para la transmisión de la clave.</p>
+        </li>
+        <li>
+            <p>¿Cómo encriptaríamos para obtener confidencialidad en la transferencia de datos?</p>
+            <p> Con clave asimetrica.</p>
+        </li>
+        <li>
+            <p>¿Como encriptaríamos para autenticar un documento usando firma electrónica?</p>
+            <p>Se encripta unicamente el hash del documento.</p>
+        </li>
+        <li>
+            <p>¿Qué tipo de encriptación se usa en la WEB?</p>
+            <p> TLS es el protocolo de seguridad que permite negociar una clave simetrica a traves de una asimetrica.</p>
+        </li>
+    </ol>
+</section>
+    <hr/>
+    <section>
+        <ol>
+        <h2>Sección cuestionario 2 sobre HTTP</h2>
+        <li>
+		<p>¿Sobre qué protocolo binario está montado el protocolo HTTP?</p>
+		<p> Sobre TCP/IP </p>
+		</li>
+		<li>
+		<p>¿Cuáles son los clientes http y los servidores http más utilizados?</p>
+        <p> Clientes: Navegadores como Chrome, Firefox, Safari.
+          <br>  Servidores: Apache, Nginx, IIS. </p>
+        </li>
+		<li>
+			<p>Qué verbos admite un comando en el requerimiento HTTP</p>
+			<p> Admite GET, POST , PUT , DELETE entre otros</p>
+				</li>
+				<li>
+					<p>¿Qué contenido lleva el body de un requerimiento HTTP?</p>
+					<p> Lleva los datos en cualquier formato, por ejemplo los del formulario enviados por POST</p>
+				</li>
+				<li>
+					<p>¿Qué diferencia existe entre un URL y un URI?</p>
+					<p>La diferencia es que URI es solo el recurso que necesito, y la URL son los datos necesarios para establecer la conexion, (protocolo,nombreHost,dominioHost,puerto)+ recurso</p>
+				</li>
+				<li>
+					<p>¿Como se almacena información relacionada con las respuestas http?</p>
+					<p>En el header(tamaño y tipo de datos).</p>
+				</li>
+				<li>
+					<p>Que significa Virtual hosting?</p>
+					<p>Significa que una misma dirección IP soporta multiples dominios para poder atender muchos pedidos de conexión  </p>
+				</li>
+				<li>
+					<p>¿Por qué el HTTP se considera STATE LESS?</p>
+					<p> Se le considera "sin estado" porque cuando se termina la conexión los datos(estado) de pierden.</p>
+				</li>
+				<li>
+					<p>¿Qué nueva version de HTTP se está usando para mejorar la velocidad de la WEB?</p>
+					<p> HTTP/2 mejora la velocidad porque permite multiplex de requerimientos sin espera de respuesta.  </p>
+				</li>
+				<li>
+					<p>¿Cómo va a mejorar el comportamiento de una aplicación WEB en ambientes ruidosos o de débil conexión?</p>
+					<p> HTPP/3 al basarse en el protocolo QUIC UDP, si se piede la conexion, se reestablece mas rapido
+					<br>en comparación a TCP</p>
+				</li>
+        </ol>
+    </section>
+	<hr/>
+	<section>
+		<h2>Sección de imagenes representativas del protocolo</h2>
+		<img src="Esquema-Protocolo-HTTP.jpg" height="377" width="506" style="border: 1px solid; color: black;" />
+		<img src="http-messages.jpg" height="300" width="800" style="border: 1px solid; color: black;" />
+	</section>
+	<hr/>
+	<section>
+		<h2>Sección de videos representativas del protocolo</h2>
+		<video width="560" height="315" controls autoplay>
+        <source src="SSL, TLS, HTTPS, HTTP - Explicado Fácilmente.mp4" type="video/mp4"></video>
+	</section>
+<footer>
+	<h2> Datos del alumno</h2>
+	<p> Micaela Berzoni</p>
+	<address>
+	<p>Localidad: Villa Crespo</p>
+		<p>Correo electronico: micaelaberzoni01@gmail.com</p>
+	</address>
+</footer>
+</body>
+</html>
