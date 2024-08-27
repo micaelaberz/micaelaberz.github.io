@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+        <meta name="addsearch-category" content="Css,Divs internos absolutos"/>
+        <title>Divs Absolutos</title>
+     </head>
+<style>
+    html, body {
+        height:1100px;
+    }
+
+    h2,h3{
+        font-size:20px;
+        margin: 0;
+    }
+    p{  margin:0;
+        font-size: 16px;
+    }
+    div#Padre{
+        width:85%;
+        margin: auto;
+        height: 100%;
+        background-color: lightblue;
+        left: 100px;
+        position: static;
+    }
+    div.abos{
+        position: absolute;
+        background-color:aqua;
+        width:30%;
+        height: 350px;
+        /*left:250px;
+        top:100px;*/
+        left:15%;
+        top:18%;
+
+    }
+    div#absTransparente{
+                position: absolute;
+        background-color: grey;
+        width:40%;
+        height:450px;
+        opacity: 0.5;
+        left:35%;
+        top:50%;
+        z-index: 10;
+    }
+    div#inclinado{
+        position: absolute;
+        background-color: greenyellow;
+        width:35%;
+        height:auto;
+        z-index: 1;
+        /*left:660px;
+        top:550px;*/
+        left:50%;
+        top:90%;
+        transform:rotate(10deg);
+    }
+img{
+    max-width:30%;
+    margin:1px;
+    }
+
+
+</style>
+    <body>
+<div id="Padre">
+
+<div class="abos"><h3>Contenedor interno 1.</h3><p>Esto es un layer div con posicion absoluta con respecto al contenedor padre</p></div>
+    <div id="absTransparente"><h3>Contenedor interno 3.</h3><p>Esto es un layer div con posicion absoluta con respecto al contenedor padre</p>
+    <p>Corrido 300px a la izquierda y 340 de alto</p></div>
+    <div id="inclinado"><h3>Contenedor interno2.</h3><img src="castillo-de-neuschwainstein-31.jpg" >
+    <img src="castillo-de-neuschwainstein-31.jpg">
+    <img src="castillo-de-neuschwainstein-31.jpg">
+    <img src="castillo-de-neuschwainstein-31.jpg">
+    <img src="castillo-de-neuschwainstein-31.jpg"></div>
+        <h2>Estructura absoluta</h2>
+</div>
+</body>
+</html>

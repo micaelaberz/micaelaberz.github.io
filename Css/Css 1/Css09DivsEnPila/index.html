@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+    <title>Divs hijos en columnas</title>
+     </head>
+    <style>
+        * {font-size:18px;margin: 0;}
+        h3{margin: 0; text-align:center; }
+    div.Fondo{
+        margin:auto;
+        width:80%;  /*80% DE LA VENTANA*/
+        height:100%;
+        background-color:orangered;
+        display:flex;
+        flex-direction: column; /* Alinea los hijos en una columna */
+        align-items: center;
+        }
+    div.Hijo{
+            width:50%;
+            height:180px;
+            margin:10px;/*distancia entre hijos */
+            background-color: orange;
+            border-radius: 10px;
+            box-shadow: 16px 8px 2px rgba(0,0,0,0.3);
+    }
+        div.Hijo2{
+            width:50%;
+            height:180px;
+            margin:10px;/*distancia entre hijos */
+            background:radial-gradient(orange,white ,pink);
+            border-radius: 10px;
+            box-shadow: 16px 8px 2px rgba(0,0,0,0.3);
+    }
+        div.Hijo3{
+            width:50%;
+            height:180px;
+            margin:10px;/*distancia entre hijos */
+            background: linear-gradient(45deg,orange, white, pink);
+            border-radius: 10px;
+            box-shadow: 16px 8px 2px rgba(0,0,0,0.3);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+    }
+
+.imagen { max-width:100%;
+        max-height:100%;
+        }
+
+        div.Hijo4{
+            width:50%;
+            height:180px;
+            margin:10px;/*distancia entre hijos */
+            background: linear-gradient(-45deg,orange, white, pink);
+            border-radius: 10px;
+            box-shadow: 16px 8px 2px rgba(0,0,0,0.3);
+            box-sizing:border-box;
+            padding-top:1%;
+            padding-left:5%;
+            text-align: left;
+    }
+         div.Hijo5 {
+            width:50%;
+            height:180px;
+            background: linear-gradient(-45deg,orange, white, pink);
+            border-radius: 10px;
+            box-shadow: 16px 8px 2px rgba(0,0,0,0.3);
+            text-align: left;
+            margin : 10px;
+    }
+@media (min-width: 1080px){
+    div#divGris{
+        background-color: grey;
+        margin: 0;
+            }
+        }
+@media (min-width: 600px) and (max-width: 1080px){
+    div#divGris{
+        background-color:lightyellow;
+        margin: 0;
+            }
+}
+@media (max-width: 600px){
+    div#divGris{
+        background-color:lightblue;
+        margin:0;
+            }
+}
+</style>
+<body>
+    <div class="Fondo"><h3>Caja en pilas</h3>
+        <div class="Hijo"
+             id="divGris">
+            <p>Gris para viewport mayores a 1080px</p><br/>
+            <p>Amarillo claro para viewport entre 600px y 1080px</p><br/>
+            <p>Celeste para viewport menor a 600px</p>
+        </div>
+    <div class="Hijo2">
+    <h3>Gradiente radial como fondo</h3>
+    </div>
+    <div class="Hijo3">
+     <img class="imagen" src="./consejos-imagenes-768x400.jpg" >
+    </div>
+    <div class="Hijo4">
+        <p>Texto alineado a la izquierda + padding.</p>
+    </div>
+    <div class="Hijo5">
+        <p>Texto alineado a la izquierda y sin padding y sin margen. </p>
+    </div>
+    </div>
+</body>
+</html>

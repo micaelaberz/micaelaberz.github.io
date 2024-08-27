@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+        <meta name="addsearch-category" content="Css,Caja flexible"/>
+        <title>Caja fexible</title>
+     </head>
+
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+        font-size: 18px;
+    }
+        div.Padre{
+            width: 90%;
+            margin: auto;
+            height: 100vh;
+            background-color:lightyellow;
+            display: flex;
+            justify-content: space-around;            /*separaccion automat*/
+            flex-wrap: wrap;
+        }
+        img {
+            height:200px; /*para que funcione el wrap tengo que determinar un ancho fijo*/
+            margin-top:15%;
+        }
+
+
+
+
+    </style>
+<body>
+<div class="Padre">
+    <img src="flor-del-ceibo-20221122-1457854.jpg">
+    <img src="flor-del-ceibo-20221122-1457854.jpg">
+    <img src="flor-del-ceibo-20221122-1457854.jpg">
+</div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+    <title>Divs en Columnas</title>
+     </head>
+    <style>
+          html, body{margin:0}
+          *{
+              font-size:1em;
+              text-align: left;
+          }
+
+    div.Padre{
+            background-color: yellowgreen;
+            width:90%; /* Ocupa todo el ancho de la ventana */
+            box-sizing:border-box;
+            padding:20px;
+            margin:auto;
+            overflow: hidden;  /*saca lo que sobresale de la ventana*/
+    }
+    div.Hijo{
+        float:left;
+        background-color: gold;
+        width:200px;  /* 80% del ancho de la ventana */
+        padding:10px; /*espacio texto y borde de div*/
+        margin:7px; /*margen entre divs*/
+        box-sizing:border-box;
+        align-items: center;
+
+    }
+
+@media (max-width: 600px){
+    div.Amar{
+        background-color:greenyellow;
+            }
+}
+img#Imagen{
+
+            width:100%; /* Ajusta el ancho automáticamente para mantener la proporción */
+            height:100%;
+    }
+        </style>
+
+<body>
+<div class="Padre"><h1>Encolumnado sin tablas</h1>
+<div class="Hijo Amar" ><article><h2>Computacion cuantica</h2>
+                <p>La computación cuántica representa un avance significativo en el procesamiento de datos al utilizar qubits en lugar de bits tradicionales. Esto permite resolver problemas complejos a velocidades mucho mayores.
+                    <br/>
+                    Empresas como Google e IBM están liderando el desarrollo de esta tecnología, que promete revolucionar áreas como la criptografía, el análisis de grandes datos y la simulación de moléculas para la investigación científica. Aunque aún en sus primeras etapas, la computación cuántica podría tener un impacto profundo en la tecnología y la ciencia.</p>
+<p>Impacto en Diversos Sectores: La computación cuántica tiene el potencial de transformar campos como la criptografía, al ofrecer nuevos métodos para asegurar la comunicación. En la investigación científica, podría acelerar el descubrimiento de nuevos medicamentos y materiales. Además, en el ámbito financiero, puede optimizar la gestión de riesgos y mejorar las predicciones de mercado.</p>
+</article></div>
+<div class="Hijo Amar"><article><h2>Inteligencia Artificial Generativa</h2>
+<p>La inteligencia artificial generativa está revolucionando la creación de contenido al permitir que las máquinas generen texto, imágenes y música a partir de datos existentes. Modelos como GPT-4 de OpenAI pueden redactar artículos, crear diálogos realistas y hasta componer música.
+    <br/>Herramientas como DALL-E están generando imágenes a partir de descripciones textuales, lo que abre nuevas posibilidades para el diseño gráfico y la creatividad.</p></article></div>
+<div class="Hijo Iguales Amar" >
+    <article>
+        <h2>Realidad Aumentada (AR) y Realidad Virtual (VR)</h2>
+        <p>La realidad aumentada y la realidad virtual están cambiando la forma en que experimentamos el mundo digital. La AR superpone información digital en el mundo real, mientras que la VR crea entornos completamente virtuales. <p/>
+    </article>
+</div>
+<div class="Hijo Iguales Amar">
+    <article><h2> 5G y el Internet de las Cosas (IoT)</h2>
+<p>La llegada del 5G está revolucionando el Internet de las Cosas (IoT) al ofrecer velocidades de conexión mucho más rápidas y una menor latencia. Esto permite una mayor interconexión entre dispositivos inteligentes, mejorando la eficiencia y la funcionalidad de las aplicaciones IoT.</p>
+</article>
+</div>
+<div class="Hijo Iguales Amar">
+    <article><h2>Blockchain y Criptomonedas</h2>
+<p>El blockchain sigue ganando relevancia como una tecnología clave para la seguridad y la transparencia en el registro de transacciones. Esta tecnología descentralizada permite el registro de datos en una cadena de bloques inmutable, lo que asegura la integridad y la transparencia de las transacciones.</p>
+</article>
+</div>
+<div class="Hijo Amar">
+    <article><h2>Automatización en el Hogar</h2>
+<p>La automatización en el hogar está transformando la forma en que interactuamos con nuestro entorno. Los sistemas de control de voz y los dispositivos inteligentes están simplificando la gestión del hogar al permitir la automatización de tareas diarias y el control remoto de dispositivos.</p>
+<img src="hq720.jpg" id="Imagen" alt="Automatizacion en el hogar">
+    </article>
+</div>
+<div class="Hijo Iguales Amar">
+    <article><h2> Impresión 3D</h2>
+<p>La impresión 3D se está utilizando para fabricar desde prototipos de productos hasta piezas de repuesto y prótesis médicas personalizadas. En el sector industrial, está permitiendo la producción de componentes complejos que serían difíciles de fabricar con métodos tradicionales. </p>
+</article>
+</div>
+<div class="Hijo Iguales Amar">
+    <article><h2>Computación en la Nube</h2>
+<p>La computación en la nube sigue siendo una tecnología clave para el almacenamiento y la gestión de datos. Ofrece flexibilidad y escalabilidad, permitiendo a las empresas y usuarios individuales acceder a recursos y servicios desde cualquier lugar con una conexión a Internet.</p>
+</article>
+</div>
+</div>
+</body>
+</html>

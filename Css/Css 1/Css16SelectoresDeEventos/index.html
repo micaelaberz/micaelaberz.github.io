@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+        <meta name="addsearch-category" content="Css,Selectores de eventos"/>
+        <title>Selectores de eventos</title>
+     </head>
+    <style>
+        html, body{
+            margin:0;
+            box-sizing:border-box;
+            font-family: serif;
+            color:black;
+            font-size: 16px;
+            text-align:left;
+        }
+        .Boton{
+            display: inline-block;
+            background-color: pink;
+            color:black;
+            padding: 20px;
+            text-decoration: none;
+            float: left;
+        }
+        .Boton-a:hover{
+            background-color: darkmagenta;
+            color:white;
+        }
+        input:focus {
+            background-color: yellow;
+        }
+        img{
+            max-width:100%;
+            max-height:100%;
+        }
+        div#Padre{
+            background-color: lightsalmon;
+            width:90%;
+            box-sizing:border-box;
+            margin:auto;
+            height:900px;
+        }
+        div.Hijo img:active {
+            transition: transform 0.5s ease; /* Suaviza la transición del agrandamiento */
+            transform: scale(5); /* Agranda la imagen al 300% de su tamaño original */
+        }
+        div.Hijo{
+            border: 1px solid black;
+            width: 150px;
+            height: 150px;
+            padding-left: 0;
+            float: left;
+        }
+    </style>
+
+<body>
+<div id="Padre">
+    <a class="Boton Boton-a" HREF="../Css14DivsInternoEnColumnas/index.html" target="_blank"> Opción 1</a>
+    <a class="Boton Boton-a" HREF="../Css10DivsEnFila/index.html" target="_blank"> Opción 2</a>
+    <a class="Boton Boton-a" HREF="../Css09DivsEnPila/index.html" target="_blank"> Opción 3</a>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <div>
+    <form>
+          <p>
+              <label class="Texto">Apellido:<br/>
+                  <input type="text" name="Apellido" id="Apellido">
+              </label>
+          </p>
+        <p> <label class="Texto">Nombres:<br/>
+                <input type="text" name="Nombre" id="Nombre">
+            </label>
+        </p>
+    </form>
+    </div>
+    <h2>Expandir la imagen un 50% del contener padre al sostener el click</h2>
+    <div class="Hijo ">
+        <img src="01-edge-of-space-sts080-759-038_orig.jpg" alt="Planeta Tierra">
+    </div>
+    <div class="Hijo">
+        <img  src="6661f595252bb.jpg" alt="Galaxia">
+    </div>
+    <div class="Hijo">
+        <img src="concept-of-nebula-with-galaxies-in-deep-space-cosmos-discovery-outer-space-and-stars-generat-ai-free-photo.jpg" alt="Galaxia con color">
+    </div>
+    <div class="Hijo">
+        <img src="vert.jpg" alt="Via Lactea" >
+
+    </div>
+</div>
+</body>
+</html>
