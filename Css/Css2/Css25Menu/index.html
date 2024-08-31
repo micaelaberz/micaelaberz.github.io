@@ -5,110 +5,16 @@
 		<meta name="addsearch-category" content="Css, programación"/>
 			<title>Ejercicios CSS</title>
 </head>
-    <style>
-	  *{
-    margin: 0;
-    padding: 0;
-  }
-
-	  #menu ul{ /*nav*/
-		  list-style:none;
-		  position: absolute;
-		  width:auto;
-		  background-color: blueviolet;
-		  ;
-		}
-
-	 .menu_horizontal {
-		  list-style: none;
-		  display: flex;
-		  flex-direction: row;
-		  align-items: center;
-
-	  }
-
-	  .menu_horizontal li  a{ /* elementos de lista principal*/
-		  display: block;
-		  text-decoration: none;
-		  height:50px;
-		  margin-right:30px;
-			width: 100%;
-
-	  }
-
-		.menu_horizontal li:hover{
-			background-color: purple;
-			color: white;
-		}
-	  a{
-
-		  color: #111111;
-
-	  }
-		.menu_vertical{
-			position: absolute;
-			display: none;
-			list-style: none;
-		}
-		.menu1 ul li{
-			position: relative;
-			float: left; /* Necesario para el posicionamiento del submenú */
-			text-decoration: none;
-
-		}
-		.menu ul li a {
-			display: block;
-			text-align: left;
-		}
-	  .menu_horizontal li:hover .menu_vertical /* despliega menu vertical*/
-	  {
-		  display:block;
-		  height:auto;
-
-	  }
-	  .menu_vertical li:hover{   /* cuando bajo x elemento vertical*/
-		  background-color:darkslateblue;
-
-	  }
-	  .menu_vertical li h3{
-		  display: block;
-		  margin:10px;
-
-	  }
-	</style>
-
-
 
 <body>
-<nav id="menu">
-<ul class="menu_horizontal">
-  <li><a href="/micaelaberz.github.io/html/index.htl" TARGET="_blank"><h2>HTML</h2></a>
-	<ul class="menu_vertical">
-		<li><h3>Tablas</h3></li>
-		<li><h3>Form</h3></li>
-		<li><h3>IFrames</h3></li>
+	<header><h1>Ejercicios CSS parte 2</h1></header>
+	<ul>
+		<li>
+			<h2> <a href="./Css25Menu/index.html">Css25 Menu</a> </h2>
+		</li>
+		<li>
+			<h2><a href="./Css%202/index.html" >Css Parte 2 </a></h2>
+		</li>
 	</ul>
-	</li>
-  <li>
-	  <a href="index.html/html/index.html" TARGET="_blank"><h2>CSS</h2></a>
-    <ul class="menu_vertical">
-      <li><h3>Style en Header</h3></li>
-      <li><h3>Selector de clase</h3></li>
-      <li><h3>Style en file</h3></li>
-    </ul>
-    </li>
-	<li>
-		<a href="index.html/html/index.html" TARGET="_blank"><h2>JSCRIPT</h2></a>
-	</li>
-	<li>
-		<a href="index.html/html/index.html" TARGET="_blank"><h2>ESPECIALES</h2></a>
-	</li>
-	<li>
-		<a href="index.html/html/index.html" TARGET="_blank"><h2>PHP</h2></a>
-	</li>
-</ul>
-  </nav>
-
-
 </body>
 </html>
