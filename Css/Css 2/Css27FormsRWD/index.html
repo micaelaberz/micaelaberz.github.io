@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta http-equiv="Content-Type" charset="utf-8"/>
+		<meta name="addsearch-category" content="Css, programación"/>
+			<title>Css Form RWD</title>
+</head>
+    <style>
+        body{
+            background-color: blue;
+            height:100vh;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+    header{
+        background-color: yellow;
+        width:100%;
+        height:13%;
+        text-align: center;
+    }
+    footer{
+        background-color: yellow;
+        width: 100%;
+        height:13%;
+    }
+
+    .padre{
+        overflow: auto;
+        width:100%;
+        height:75%;
+        background-color:red;
+    }
+
+        div.barraControl {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width:100%;
+            height:20%;
+            background-color: green;
+        }
+        .boton {
+            width:40%;
+            height:50%;
+            background-color: blueviolet;
+            cursor:pointer;
+            text-align: center;
+            margin: 30px;
+        }
+        ul{
+            list-style:none;
+
+        }
+        @media (min-width:900px){
+            .entrada {
+                width:20%;
+            }
+        }
+        @media (max-width:900px){
+            .entrada{
+                width: 100%;
+            }
+        }
+
+        @media (min-width:700px) and (max-width:900px){
+            .entrada {
+                width:25%;
+            }
+        }
+        .entrada {
+            background-color: pink;
+            text-align:left;
+            height:100px;
+            float:left;
+            border-style:solid;
+            border-color:gray;
+            border-width:1px;
+            padding:1%;
+            box-sizing: border-box;
+        }
+        a{
+            color: #111111;
+            text-decoration: none;
+
+        }
+    </style>
+
+
+<body>
+
+<header id="head"><h2>FORMULARIO</h2></header>
+
+<div class="padre">
+    <div>
+    <div class="entrada">
+        <label for="nombre">1. Nombres:</label><br>
+        <input type="text" id="nombre" name="nombre">
+    </div>
+    <div class="entrada">
+        <label for="apellido">2. Apellidos:</label><br>
+        <input type="text" id="apellido" name="apellido">
+    </div>
+        <div class="entrada">
+           <label for="dni">3. Número de DNI:</label>
+            <input type="number" id="dni" step="1" name="dni" placeholder="Ingrese su DNI" required>
+</div>
+        <div class="entrada">
+        <label for="sexo">4. Sexo:</label><br>
+        <input type="radio" id="masculino" name="sexo" value="masculino">
+        <label for="masculino">Masculino</label><br>
+        <input type="radio" id="femenino" name="sexo" value="femenino">
+        <label for="femenino">Femenino</label><br><br>
+    </div>
+    <div class="entrada">
+        <label for="contrasena">5. Contraseña:</label><br>
+        <input type="password" id="contrasena" name="contrasena" required>
+    </div>
+        <div class="entrada">
+        <label for="fechayhora">6. Fecha y Hora:</label><br>
+        <input type="datetime-local" id="fechayhora" name="fechayhora" required>
+</div>
+    <div class="entrada">
+        <label for="deshabilitado">7. Campo deshabilitado:</label><br>
+        <input type="text" id="deshabilitado" name="deshabilitado" value=" Valor deshabilitado" disabled>
+    </div>
+    <div class="entrada">
+        8. Habilidades:
+        <ul>
+        <li>
+        <input type="checkbox" id="html" name="html">
+        <label for="html">Html</label><br>
+        </li>
+        <li>
+        <input type="checkbox" id="css" name="css">
+        <label for="css">Css</label><br>
+        </li>
+        <li>
+        <input type="checkbox" id="jscript" name="jscript">
+        <label for="jscript">Jscript</label><br><br>
+        </li>
+        </ul>
+    </div>
+    <div class="entrada">
+        <label for="estudios">9. Estudios cursados:</label><br>
+        <select id="estudios" name="estudios">
+            <option value="primarios">Primarios</option>
+            <option value="secundarios">Secundarios</option>
+            <option value="terciarios">Terciarios</option>
+            <option value="universitarios">Universitarios</option>
+            <option value="postgrados">Postgrados</option>
+        </select><br><br>
+</div>
+    <div class="entrada">
+        <label for="pais">10. País de residencia:</label><br>
+        <select id="pais" name="pais">
+            <option value="arg">Argentina</option>
+            <option value="chile">Chile</option>
+            <option value="brasil">Brasil</option>
+            <option value="uruguay">Uruguay</option>
+            <option value="paraguay">Paraguay</option>
+            <option value="bol">Bolivia</option>
+        </select><br><br>
+    </div>
+    <div class="entrada">
+        <label for="esp">11. Seleccione su área de especialización:</label><br>
+        <select id="esp" name="esp">
+            <option value="desarrollo_web">Desarrollo Web</option>
+            <option value="diseño_grafico">Diseño Gráfico</option>
+            <option value="marketing_digital">Marketing Digital</option>
+            <option value="gestion_proyectos">Gestión de Proyectos</option>
+            <option value="analisis_datos">Análisis de Datos</option>
+        </select><br><br>
+</div>
+    <div class="entrada">
+        <label for="nombre">12. VACÍO </label><br>
+    </div>
+    <div class="entrada">
+            <label for="est">13. ¿Estudia actualmente?</label><br>
+            <input type="radio" id="si" name="estudia" value="si">
+            <label for="si">Sí</label><br>
+            <input type="radio" id="no" name="estudia" value="no">
+            <label for="no">No</label><br>
+    </div>
+        </div>
+
+    <div class="barraControl">
+        <div class="boton"><a href="enviar.html" target="_blank"><h2>Enviar</h2></a></div>
+                <div class="boton"><h2>Reset</h2></div>
+
+    </div>
+
+</div>
+
+
+        <footer id="foot"><h2>PIE DE PAGINA</h2></footer>
+
+
+
+</body>
+</html>
