@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tablas RWD</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    html, body {
+        height: 100%;
+    }
+
+    body {
+        margin-bottom: 40px;
+    }
+    header{
+        width: 100%;
+        height:80px;
+        background-color: pink;
+        text-align: center;
+    }
+    footer{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height:80px;
+        background-color: pink;
+        text-align: center;
+    }
+    [campo-dato='Id'] {
+        width:5%;
+        color: white;
+    }
+    #barra{
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 120px); /* Ajusta el valor según la altura del header y el footer */
+    overflow: auto;
+    }
+
+    table{
+        border-collapse: collapse;
+        margin-top: 0;
+
+    }
+    tbody{
+        overflow: auto;
+    }
+    thead{  /TITULOS COLUMNAS/
+    position: sticky; /* Fija la posición del encabezado */
+    top: 0; /* Alinea el encabezado al top del contenedor */
+    background-color: green; /* Color de fondo para los encabezados */
+    z-index: 1; /* Asegura que el encabezado esté por encima del contenido */
+    }
+    thead th{
+        border: 1px solid black; /* Opcional: Agrega un borde a los encabezados */
+
+    }
+    tr{
+        width: auto;
+        height: 40px;
+        font-size: 20px;
+        overflow: auto;
+    }
+    td{ /columnas/
+        width: auto;
+        box-sizing: border-box;
+        padding-left:10px;
+
+    }
+
+
+    tbody tr:nth-child(odd) {  /impares/
+        background-color:olivedrab;
+    }
+      tbody tr:nth-child(even) { /pares/
+            background: darkgreen;}
+
+    @media (max-width:1000px){
+        [campo-dato='Pro'] {
+            display:none;
+        }
+    }
+        @media (max-width:1000px){
+        [campo-dato='PU'] {
+            display:none;
+        }
+    }
+    @media (max-width:1000px){
+        [campo-dato='Cant'] {
+            display:none;
+        }
+    }
+
+
+
+</style>
+<body>
+<header>
+    <h2>RWD (Responsive web design) TABLE:</h2>
+</header>
+
+<div id="barra">
+
+<table>
+<thead> <!--columna-->
+<tr>
+    <th campo-dato='Id'>ID</th>
+    <th campo-dato='Nom'>Nombre Producto</th>
+    <th campo-dato='Cat'>Categoría</th>
+    <th campo-dato='Cant'>Cantidad</th>
+    <th campo-dato='PU'>Precio U</th>
+    <th campo-dato='Pro'>Proveedor</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr> <!--filas-->
+    <td campo-dato='Id'>1</td>
+    <td campo-dato='Nom'>Lapicera Azul</td>
+    <td campo-dato='Cat'>Lapiceras</td>
+    <td campo-dato='Cant'>48</td>
+    <td campo-dato='PU'>$500</td>
+    <td campo-dato='Pro'>Tools & More</td>
+</tr>
+<tr>
+    <td campo-dato='Id'>2</td>
+    <td campo-dato='Nom'>Cuaderno A4</td>
+    <td campo-dato='Cat'>Cuadernos</td>
+    <td campo-dato='Cant'>100</td>
+    <td campo-dato='PU'>$4000</td>
+    <td campo-dato='Pro'>Paper Goods Inc.</td>
+</tr>
+<tr>
+    <td campo-dato='Id'>3</td>
+    <td campo-dato='Nom'>Resaltador Amarillo</td>
+    <td campo-dato='Cat'>Material de Oficina</td>
+    <td campo-dato='Cant'>150</td>
+    <td campo-dato='PU'>$600</td>
+    <td campo-dato='Pro'>Highlighters Ltd.</td>
+</tr>
+<tr>
+    <td campo-dato='Id'>4</td>
+    <td campo-dato='Nom'>Grapadora Manual</td>
+    <td campo-dato='Cat'>Herramientas</td>
+    <td campo-dato='Cant'>30</td>
+    <td campo-dato='PU'>$6000</td>
+    <td campo-dato='Pro'>Tools & More</td>
+</tr>
+<tr>
+    <td campo-dato='Id'>5</td>
+    <td campo-dato='Nom'>Papel A4 500 Hojas</td>
+    <td campo-dato='Cat'>Papeleria</td>
+    <td campo-dato='Cant'>50</td>
+    <td campo-dato='PU'>$5000</td>
+    <td campo-dato='Pro'>Paper Goods Inc.</td>
+</tr>
+            <tr>
+                <td campo-dato='Id'>6</td>
+                <td campo-dato='Nom'>Marcador Verde</td>
+                <td campo-dato='Cat'>Material de Oficina</td>
+                <td campo-dato='Cant'>75</td>
+                <td campo-dato='PU'>$600</td>
+                <td campo-dato='Pro'>Markers Plus</td>
+            </tr>
+<tr>
+               <td campo-dato='Id'>7</td>
+                <td campo-dato='Nom'>Carpeta de 3 Anillos</td>
+                <td campo-dato='Cat'>Material de Oficina</td>
+                <td campo-dato='Cant'>60</td>
+                <td campo-dato='PU'>$2000</td>
+                <td campo-dato='Pro'>Office Essentials</td>
+            </tr>
+          <tr>
+                <td campo-dato='Id'>8</td>
+                <td campo-dato='Nom'>Post-it Amarillo</td>
+                <td campo-dato='Cat'>Papeleria</td>
+                <td campo-dato='Cant'>200</td>
+                <td campo-dato='PU'>$700</td>
+                <td campo-dato='Pro'>Sticky Notes Co.</td>
+            </tr>
+            <tr>
+                <td campo-dato='Id'>9</td>
+                <td campo-dato='Nom'>Clip Metálico</td>
+                <td campo-dato='Cat'>Material de Oficina</td>
+                <td campo-dato='Cant'>500</td>
+                <td campo-dato='PU'>$600</td>
+                <td campo-dato='Pro'>Office Supplies Co.</td>
+            </tr>
+            <tr>
+                <td campo-dato='Id'>10</td>
+                <td campo-dato='Nom'>Papel para Impresora</td>
+                <td campo-dato='Cat'>Papeleria</td>
+                <td campo-dato='Cant'>20</td>
+                <td campo-dato='PU'>$7000</td>
+                <td campo-dato='Pro'>Paper Goods Inc.</td>
+            </tr>
+            <tr>
+                <td campo-dato='Id'>11</td>
+                <td campo-dato='Nom'>Ratón Inalámbrico</td>
+                <td campo-dato='Cat'>Ratón</td>
+                <td campo-dato='Cant'>15</td>
+                <td campo-dato='PU'>$5000</td>
+                <td campo-dato='Pro'>Gadget World</td>
+            </tr>
+            <tr>
+                <td campo-dato='Id'>12</td>
+                <td campo-dato='Nom'>Organizador de Escritorio</td>
+                <td campo-dato='Cat'>Organizador</td>
+                <td campo-dato='Cant'>25</td>
+                <td campo-dato='PU'>$8000</td>
+                <td campo-dato='Pro'>Office Essentials</td>
+            </tr>
+            <tr>
+                <td campo-dato='Id'>13</td>
+                <td campo-dato='Nom'>Portapapeles</td>
+                <td campo-dato='Cat'>Portapapeles</td>
+                <td campo-dato='Cant'>30</td>
+                <td campo-dato='PU'>$5400</td>
+                <td campo-dato='Pro'>Supplies Galore</td>
+            </tr>
+            <tr>
+                <td campo-dato='Id'>14</td>
+                <td campo-dato='Nom'>Lapicera Negra</td>
+                <td campo-dato='Cat'>Materiales de Escritura</td>
+                <td campo-dato='Cant'>200</td>
+                <td campo-dato='PU'>$700</td>
+                <td campo-dato='Pro'>Office Supplies Co.</td>
+            </tr>
+</tbody>
+</table>
+    </div>
+<footer><h2>PIE</h2></footer>
+</body>
