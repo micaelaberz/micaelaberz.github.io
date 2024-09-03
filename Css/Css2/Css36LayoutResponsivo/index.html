@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta http-equiv="Content-Type" charset="UTF-8"/>
+		<meta name="addsearch-category" content="Css, Layout"/>
+			<title>Layout Responsivo</title>
+</head>
+    <style>
+
+       html, body{
+            height:100vh;
+            margin: 0;
+        }
+
+       #grande{
+           margin: auto;
+           width:80vw;
+           height:100vh;
+           background-color: red;
+           display: flex;
+           flex-direction:column;
+       }
+       #hea {
+           background-color: greenyellow;
+           width: 100%;
+           height:100px;
+           text-align: center;
+       }
+       #fot{
+           background-color: greenyellow;
+           width: 100%;
+           height:100px;
+           text-align: center;
+       }
+       #menu{
+           margin: 0;
+           padding: 0;
+       }
+       #menu ul{ /*nav*/
+           list-style:none;
+           height:60px;
+           background-color: blueviolet;
+       ;
+       }
+
+	 .menu_horizontal {
+		  list-style: none;
+		  display: flex;
+		  flex-direction: row;
+         margin: 0;
+         justify-content: space-around;
+
+	  }
+
+	  .menu_horizontal li  a{ /* elementos de lista principal*/
+
+          text-decoration: none;
+          display:flex;
+		  flex-direction: row;
+      }
+
+		.menu_horizontal li:hover{
+			background-color: purple;
+			color: white;
+		}
+	  a{
+
+		  color: #111111;
+
+	  }
+
+		.menu_vertical{
+			position: absolute;
+			display: none;
+			list-style: none;
+		}
+		.menu1 ul li{
+			position: relative;
+			float: left; /* Necesario para el posicionamiento del submenú */
+			text-decoration: none;
+			display: block;
+
+		}
+		.menu ul li a {
+			display: block;
+			text-align: left;
+		}
+	  .menu_horizontal li:hover .menu_vertical /* despliega menu vertical*/
+	  {
+		  display:block;
+		  height:auto;
+
+	  }
+	  .menu_vertical li:hover{   /* cuando bajo x elemento vertical*/
+		  background-color:darkslateblue;
+
+	  }
+	  .menu_vertical li h3{
+		  display: block;
+
+	  }
+    div#contenedor{
+        display: flex;
+        flex-direction: row;
+        height: 500px;
+        }
+       div#columnas{
+           width: 100%;
+           display: flex;
+           flex-direction: row;
+           overflow-x: auto; /* Permite el desplazamiento horizontal si el contenido es más ancho que el contenedor */
+           background-color: blue;
+           align-items: flex-starT;
+
+       }
+       div.colu{
+           background-color: gold;
+           width: 200px; /* Ancho fijo para el div */
+           box-sizing: border-box;
+           padding: 3px;
+       }
+       div#menu{
+
+       }
+
+    </style>
+
+
+
+
+
+<body>
+<div id="grande">
+    <div id="hea"><header>
+        <h2>Titulo pagina</h2>
+    </header>
+    </div>
+    <div id="menu">
+        <ul class="menu_horizontal">
+            <li><a href="/micaelaberz.github.io/html" TARGET="_blank"><h2>HTML</h2></a>
+                <ul class="menu_vertical">
+                    <li><h3>Tablas</h3></li>
+                    <li><h3>Form</h3></li>
+                    <li><h3>IFrames</h3></li>
+                </ul>
+            </li>
+            <li>
+                <a href="/micaelaberz.github.io/Css" TARGET="_blank"><h2>CSS</h2></a>
+                <ul class="menu_vertical">
+                    <li><h3>Style en Header</h3></li>
+                    <li><h3>Selector de clase</h3></li>
+                    <li><h3>Style en file</h3></li>
+                </ul>
+            </li>
+            <li>
+                <a href="index.html/html/index.html" TARGET="_blank"><h2>JSCRIPT</h2></a>
+            </li>
+            <li>
+                <a href="index.html/html/index.html" TARGET="_blank"><h2>ESPECIALES</h2></a>
+            </li>
+            <li>
+                <a href="index.html/html/index.html" TARGET="_blank"><h2>PHP</h2></a>
+            </li>
+        </ul>
+    </div>
+    <div id="contenedor">
+
+    <div id="columnas">
+        <div class="colu"><p>La inteligencia artificial (IA) es un campo de la informática dedicado a la creación de sistemas capaces de realizar tareas que normalmente requieren inteligencia humana. Estos sistemas pueden aprender de datos, reconocer patrones y tomar decisiones. Aplicaciones comunes de la IA incluyen asistentes virtuales como Siri y Alexa, sistemas de recomendación en plataformas de streaming y algoritmos de detección de fraude en servicios financieros.</p></div>
+        <div class="colu"><p>La computación cuántica representa un avance significativo en el procesamiento de datos al utilizar qubits en lugar de bits tradicionales. Esto permite resolver problemas complejos a velocidades mucho mayores.
+            <br/>
+            Empresas como Google e IBM están liderando el desarrollo de esta tecnología, que promete revolucionar áreas como la criptografía, el análisis de grandes datos y la simulación de moléculas para la investigación científica. Aunque aún en sus primeras etapas, la computación cuántica podría tener un impacto profundo en la tecnología y la ciencia.</p>
+        </div>
+        <div class="colu"><p>El efecto invernadero es un proceso natural en el que ciertos gases en la atmósfera de la Tierra, como el dióxido de carbono y el metano, atrapan el calor del sol, manteniendo el planeta cálido. Sin este efecto, la Tierra sería demasiado fría para sostener vida tal como la conocemos. Sin embargo, la actividad humana ha aumentado las concentraciones de estos gases, contribuyendo al calentamiento global y al cambio climático</p></div>
+        <div class="colu"><p>Los bosques tropicales, ubicados cerca del ecuador, son conocidos por su biodiversidad excepcional. Estos ecosistemas albergan una gran variedad de plantas y animales, muchos de los cuales no se encuentran en ningún otro lugar del mundo. Los bosques tropicales también juegan un papel crucial en la regulación del clima global, la producción de oxígeno y la conservación del agua.</p></div>
+        <div class="colu"><p>La historia de Internet comienza en la década de 1960 con ARPANET, un proyecto financiado por el Departamento de Defensa de los Estados Unidos. ARPANET fue diseñado para permitir la comunicación entre diferentes instituciones de investigación mediante el uso de paquetes de datos, una tecnología fundamental para el desarrollo de Internet. En 1969, ARPANET conectó cuatro universidades y marcó el inicio de una red que revolucionaría la comunicación global.</BR>
+Durante los años 70 y 80, ARPANET y otras redes similares se expandieron y evolucionaron. La introducción del protocolo TCP/IP en 1983 fue un hito crucial, ya que permitió que diferentes redes se conectaran y comunicaran entre sí. Este protocolo es la base de la Internet moderna. En 1991, Tim Berners-Lee, un ingeniero informático británico, presentó la World Wide Web (WWW), una interfaz gráfica que facilitó el acceso a la información en línea mediante el uso de navegadores web. La web hizo que Internet fuera accesible no solo para expertos en tecnología, sino para el público en general.</p></div>
+    </div>
+</div>
+   <div id="fot"><footer><h2>Pie de pagina</h2></footer></div>
+</div>
+</body>
+</html>

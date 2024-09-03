@@ -31,9 +31,12 @@
         background-color: pink;
         text-align: center;
     }
-    [campo-dato='Id'] {
+
+    [campo-dato='ID'] {
         width:5%;
-        color: white;
+    }
+    [campo-dato="Cant"]{
+        color: red;
     }
     #barra{
     display: flex;
@@ -47,17 +50,16 @@
         margin-top: 0;
 
     }
-    tbody{
-        overflow: auto;
-    }
-    thead{  /TITULOS COLUMNAS/
+
+    thead{
     position: sticky; /* Fija la posición del encabezado */
     top: 0; /* Alinea el encabezado al top del contenedor */
-    background-color: green; /* Color de fondo para los encabezados */
+    background-color: yellow; /* Color de fondo para los encabezados */
     z-index: 1; /* Asegura que el encabezado esté por encima del contenido */
+
     }
     thead th{
-        border: 1px solid black; /* Opcional: Agrega un borde a los encabezados */
+        border: 2px solid black; /* Opcional: Agrega un borde a los encabezados */
 
     }
     tr{
@@ -74,10 +76,10 @@
     }
 
 
-    tbody tr:nth-child(odd) {  /impares/
+    tbody tr:nth-child(odd) {  /*impares*/
         background-color:olivedrab;
     }
-      tbody tr:nth-child(even) { /pares/
+      tbody tr:nth-child(even) { /*pares*/
             background: darkgreen;}
 
     @media (max-width:1000px){

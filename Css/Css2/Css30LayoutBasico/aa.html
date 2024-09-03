@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maqueta de Contenedores</title>
+    <style>
+      html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+#papa{
+    width: 80%;
+    margin: auto;
+}
+#A {
+    height: 100vh; /* Usa el alto completo de la ventana del navegador */
+    display: flex;
+    flex-direction: column;
+}
+
+#B, #D {
+    height: 33.33%; /* Cada uno ocupa un tercio del alto del contenedor principal */
+    background-color: lightcoral; /* Color de fondo para visualización */
+}
+
+#B {
+    background-color: lightblue;
+}
+
+#D {
+    background-color: lightgreen;
+}
+
+#C {
+    display: flex;
+    height: 33.33%; /* Ocupa un tercio del alto del contenedor principal */
+    background-color: lightgray;
+}
+
+#E {
+    width: 10%; /* Ancho del 10% del contenedor C */
+    background-color: lightyellow; /* Color de fondo para visualización */
+}
+p{margin: 0;
+padding:0;}
+#F {
+    width: 90%; /* Ancho del 90% del contenedor C */
+    background-color: lightpink; /* Color de fondo para visualización */
+       overflow-x: auto; /* Permite la barra de desplazamiento horizontal */
+    box-sizing: border-box;
+    }
+
+#E, #F {
+    height: 100%; /* Ocupa el 100% del alto de C */
+}
+    </style>
+</head>
+<body>
+  <div id="papa">
+    <div id="A">
+        <header id="B">
+            <h1>Header</h1>
+        </header>
+        <div id="C">
+            <nav id="E">
+                <h2>Nav</h2>
+            </nav>
+            <main id="F">
+                <h2>Main</h2>
+                                       <p>El contenido puede crecer indefinitivamente agrandando el div El contenido puede crecer indefinitivamente agrandando el div  El contenido puede crecer indefinitivamente agrandando el div El contenido puede crecer indefinitivamente agrandando el div El contenido puede crecer indefinitivamente agrandando el div</p>
+                    <p>El contenido puede crecer indefinitivamente agrandando el div El contenido puede crecer indefinitivamente agrandando el div  El contenido puede crecer indefinitivamente agrandando el div El contenido puede crecer indefinitivamente agrandando el div El contenido puede crecer indefinitivamente agrandando el div</p>
+                    <p>El contenido puede crecer indefinitivamente agrandando el div El contenido puede crecer indefinitivamente agrandando el div  El contenido puede crecer indefinitivamente agrandando el div El contenido puede crecer indefinitivamente agrandando el div El contenido puede crecer indefinitivamente agrandando el div</p>
+                    <p>El contenido puede crecer indefinitivamente agrandando el div El contenido puedeenido puede crecer indefinitivamente agrandando el div El contenido puedeenido puede crecer indefinitivamente agrandando el div El contenido puedeenido puede crecer indefinitivamente agrandando el div El contenido puedeenido puede crecer indefinitivamente agrandando el div El contenido puedeenido puede crecer indefinitivamente agrandando el div El contenido puedeenido puede crecer indefinitivamente agrandando el div El contenido puedeenido puede crecer indefinitivamente agrandando el div El contenido puede crecer indefinitivamente agrandando el div  El contenido puede crecer indefinitivamente agrandando el div El contenido puede crecer indefinitivamente agrandando el div El contenido puede crecer indefinitivamente agrandando el div</p>
+
+                    <p>El contenido puede crecer indefinitivamente agrandando el div El contenido puede crecer indefinitivamente agrandando el div  El contenido puede crecer indefinitivamente agrandando el div El contenido puede crecer indefinitivamente agrandando el div El contenido puede crecer indefinitivamente agrandando el div</p>
+            </main>
+        </div>
+        <footer id="D">
+            <h1>Footer</h1>
+        </footer>
+    </div>
+      </div>
+</body>
+</html>

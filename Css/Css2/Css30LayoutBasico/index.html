@@ -6,93 +6,146 @@
 			<title>Layout Basico</title>
 </head>
     <style>
-            * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-            body{
-                min-height: 100%;
-            }
-            html{
-                height: 100%;
-            }
 
-    #header{
-        background-color: orange;
-        width:85%;
-        height:80px;
-        margin: auto;
-    }
-            #foot{
-                width:85%;
-                margin:auto;
-                height:100px;
-                background-color: blueviolet;
-                position: absolute;
-                bottom: 0;
-            }
+      html, body {
+          margin: 0;
+          padding: 0;
+          height: 100%;
+      }
+      header, footer {
+          height:15vh; /* Cada uno ocupa un tercio del alto del contenedor principal */
+          background-color: red; /* Color de fondo para visualización */
+      }
 
-            #padre{
-                display: flex;
-                width: 85%;
-                height: 90vh;
-                margin: auto;
-                background-color: lightpink;
-            }
-            nav{
-                float:left;
-                width:20%;
-                background-color: green;
-                height:100%;
-            }
-            main{
-                float: left;
-                width: 80%;
-                overflow: auto;
-                box-sizing: border-box;
-                padding:10px;
-                background-color:lightskyblue;
+      #contenedor{
+          width: 80%;
+          margin: auto;
 
-            }
-            p{
-                margin: 0;
-                padding: 0;
-            }
 
-    </style>
-    <body>
-    <header id="header" ><h2>Titulos principal de página 1</h2></header>
-    <div id="padre">
-        <nav id="nav"></nav>
-        <main id="main">
-            <p>El contenido puede crecer indefinitivamente agrandando el div</p>
-            <p>El contenido puede crecer indefinitivamente agrandando el div</p>
-            <p>El contenido puede crecer indefinitivamente agrandando el div</p>
-            <p>El contenido puede crecer indefinitivamente agrandando el div</p>
-            <p>El contenido puede crecer indefinitivamente agrandando el div</p>
-            <p>El contenido puede crecer indefinitivamente agrandando el div</p>
-            <p>El contenido puede crecer indefinitivamente agrandando el div</p>
-            <p>El contenido puede crecer indefinitivamente agrandando el div</p>
-            <p>El contenido puede crecer indefinitivamente agrandando el div</p>
-            <p>El contenido puede crecer indefinitivamente agrandando el div</p>
-            <p>El contenido puede crecer indefinitivamente agrandando el div</p>
-            <p>El contenido puede crecer indefinitivamente agrandando el div</p>
-            </br></br></br></br></br></br>
-            <p>El contenido puede crecer indefinitivamente agrandando el div</p>
-            <p>El contenido puede crecer indefinitivamente agrandando el div</p>
-            <p>El contenido puede crecer indefinitivamente agrandando el div</p>
-            <p>El contenido puede crecer indefinitivamente agrandando el div</p>
-            <p>El contenido puede crecer indefinitivamente agrandando el div</p>
-            <p>El contenido puede crecer indefinitivamente agrandando el div</p>
+      }
+      footer{
+          position: relative;
+          bottom:0;
+      }
+      #padre{
+          display: flex;
+          height:100%;
+          flex-direction: column;
+          background-color: blue;
+      }
+
+      nav{
+          width: 20%; /* Ancho del 10% del contenedor C */
+          background-color: lightyellow; /* Color de fondo para visualización */
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+      }
+                h2{
+                    float: left;
+                    }
+
+                main{
+                    width: 80%; /* Ancho del 90% del contenedor C */
+                    height:75vh;
+                    background-color: lightpink; /* Color de fondo para visualización */
+                    overflow-x: auto; /* Permite la barra de desplazamiento horizontal */
+                    box-sizing: border-box;
+                    white-space:nowrap
+                }
+
+                p{
+                    margin: 0;
+                    padding: 0;
+                }
+      #c{
+
+          display: flex;
+          height: 33.33%; /* Ocupa un tercio del alto del contenedor principal */
+          background-color: lightgray;
+      }
+
+                #caja {
+                    background-color: lightgrey;
+                    width: 80%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content:center;}
+                .boton{
+                    width: 100%;
+                    height: 30%;
+                }
+                .boton:hover{
+                    background-color: coral;
+                }
+                a{
+                    width: 100%;
+                    height: 100%;
+                }
+                h3{
+                    text-align: center;
+                }
+        </style>
+
+        <body>
+        <div id="contenedor">
+            <div id ="padre">
+                <header id="header" >
+                    <h2>Titulos principal de página 1</h2>
+                </header>
+            <div id="c">
+                <nav id="nav">
+                    <h2 id="menu">Menú</h2>
+                    <div id="caja">
+                        <div class="boton"><h3>HTML</h3></div>
+                        <div class="boton"><h3>CSS</h3></div>
+                        <div class="boton"><h3>JSCRIPT</h3></div>
+                        <div class="boton"><h3>PHP</h3></div>
+                    </div>
+                </nav>
+                <main id="main">
+                    <p>El contenido puede crecer indefinitivamente agrandando el div El contenido puede crecer indefinitivamente agrandando el div  El contenido puede crecer indefinitivamente agrandando el div El contenido puede crecer indefinitivamente agrandando el div El contenido puede crecer indefinitivamente agrandando el div</p>
                     <p>El contenido puede crecer indefinitivamente agrandando el div</p>
-            <p>El contenido puede crecer indefinitivamente agrandando el div</p>
-            <p>El contenido puede crecer indefinitivamente agrandando el div</p>
-            <p>El contenido puede crecer indefinitivamente agrandando el div</p>
-            <p>El contenido puede crecer indefinitivamente agrandando el div</p>
-            <p>El contenido puede crecer indefinitivamente agrandando el div</p>
-        </main>
-    </div>
-    <footer id="foot "></footer>
-    </body>
-</html>
+                    <p>El contenido puede crecer indefinitivamente agrandando el div</p>
+                    <p>El contenido puede crecer indefinitivamente agrandando el div</p>
+                    <p>El contenido puede crecer indefinitivamente agrandando el div</p>
+                    <p>El contenido puede crecer indefinitivamente agrandando el div</p>
+                    <p>El contenido puede crecer indefinitivamente agrandando el div</p>
+                    <p>El contenido puede crecer indefinitivamente agrandando el div</p>
+                    <p>El contenido puede crecer indefinitivamente agrandando el div</p>
+                    <p>El contenido puede crecer indefinitivamente agrandando el div</p>
+                    <p>El contenido puede crecer indefinitivamente agrandando el div</p>
+                    <p>El contenido puede crecer indefinitivamente agrandando el div</p>
+                    </br></br></br></br></br></br>
+                    <p>El contenido puede crecer indefinitivamente agrandando el div</p>
+                    <p>El contenido puede crecer indefinitivamente agrandando el div</p>
+                    <p>El contenido puede crecer indefinitivamente agrandando el div</p>
+                    <p>El contenido puede crecer indefinitivamente agrandando el div</p>
+                    <p>El contenido puede crecer indefinitivamente agrandando el div</p>
+                    <p>El contenido puede crecer indefinitivamente agrandando el div</p>
+                    <p>El contenido puede crecer indefinitivamente agrandando el div</p>
+                    <p>El contenido puede crecer indefinitivamente agrandando el div</p>
+                    <p>El contenido puede crecer indefinitivamente agrandando el div</p>
+                    <p>El contenido puede crecer indefinitivamente agrandando el div</p>
+                    <p>El contenido puede crecer indefinitivamente agrandando el div</p>
+                    <p>El contenido puede crecer indefinitivamente agrandando el div</p>
+                                    </br></br></br></br></br></br>
+                    <p>El contenido puede crecer indefinitivamente agrandando el div</p>
+                    <p>El contenido puede crecer indefinitivamente agrandando el div</p>
+                    <p>El contenido puede crecer indefinitivamente agrandando el div</p>
+                    <p>El contenido puede crecer indefinitivamente agrandando el div</p>
+                    <p>El contenido puede crecer indefinitivamente agrandando el div</p>
+                    <p>El contenido puede crecer indefinitivamente agrandando el div</p>
+                    <p>El contenido puede crecer indefinitivamente agrandando el div</p>
+                    <p>El contenido puede crecer indefinitivamente agrandando el div</p>
+                    <p>El contenido puede crecer indefinitivamente agrandando el div</p>
+                    <p>El contenido puede crecer indefinitivamente agrandando el div</p>
+                    <p>El contenido puede crecer indefinitivamente agrandando el div</p>
+                    <p>El contenido puede crecer indefinitivamente agrandando el div</p>
+                </main>
+                </div>
+            <footer id="foot "><h1>Pie de pagina</h1></footer>
+            </div>
+        </div>
+        </body>
+    </html>
