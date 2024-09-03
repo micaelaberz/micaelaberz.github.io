@@ -12,21 +12,21 @@
           padding: 0;
           height: 100%;
       }
-      header, footer {
-          height:15vh; /* Cada uno ocupa un tercio del alto del contenedor principal */
+      #header{
+       height:33.33%; /* Cada uno ocupa un tercio del alto del contenedor principal */
           background-color: red; /* Color de fondo para visualización */
       }
-
+      #foot{
+          width: 80%;
+          position: fixed;
+          bottom: 0;
+          background-color: red; /* Color de fondo para visualización */
+      }
       #contenedor{
           width: 80%;
           margin: auto;
-
-
       }
-      footer{
-          position: relative;
-          bottom:0;
-      }
+
       #padre{
           display: flex;
           height:100%;
@@ -59,7 +59,6 @@
                     padding: 0;
                 }
       #c{
-
           display: flex;
           height: 33.33%; /* Ocupa un tercio del alto del contenedor principal */
           background-color: lightgray;
@@ -90,10 +89,12 @@
         <body>
         <div id="contenedor">
             <div id ="padre">
-                <header id="header" >
-                    <h2>Titulos principal de página 1</h2>
-                </header>
-            <div id="c">
+                <div id="header">
+                    <header>
+                        <h2>Titulos principal de página 1</h2>
+                    </header>
+                </div>
+                <div id="c">
                 <nav id="nav">
                     <h2 id="menu">Menú</h2>
                     <div id="caja">
@@ -144,7 +145,10 @@
                     <p>El contenido puede crecer indefinitivamente agrandando el div</p>
                 </main>
                 </div>
-            <footer id="foot "><h1>Pie de pagina</h1></footer>
+                <div id="foot">
+                    <footer><h1>Pie de pagina</h1>
+                    </footer>
+                </div>
             </div>
         </div>
         </body>
