@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Sentencias</title>
+</head>
+<style >
+    h1{
+        color: deeppink;
+        font-size:39px;
+    }
+    div{
+        background-color: mediumaquamarine;
+    }
+</style>
+
+<body>
+<h1>1. Texto HTML</h1>
+<div>
+    <script type="text/javascript">
+    document.write("<h1>2. Mensaje escrito desde javascript</h1>"); /*aparece despues del aceptar*/
+    alert('Al ser una ventana modal,primero se ejecuta esto y luego aceptar, se ejcuta lo siguiente');    /*ventana modal, cn boton aceptar*/
+    </script>
+<h1>3. Texto HTML despues de script dentro del mismo div</h1>
+</div>
+    <script type="text/javascript">
+    document.write("<h1>4. Mensaje escrito desde javascript en siguiente script</h1>"); /*aparece despues del aceptar*/
+    document.write("<h1>El flujo de escritura en el navegador termina después de un tiempo de haber aceptado y después de la ultima linea del documento</h1>")
+    </script>
+</body>
+</html>
