@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+
+    #contenedor{
+        margin-top: 20px;
+        width: 80%;
+        height:200px ;
+        background-color:rosybrown;
+        border:4px;
+    }
+</style>
+<body>
+<script type="text/javascript">
+var z;
+var a = 1;
+var b= "2";
+var c = 3;
+suma1= a + b;
+suma2= a + c;
+</script>
+        <button onclick="document.getElementById('contenedor').innerHTML='<h1>Valor variable z:  ' +z+ '</h1></br>' +
+          '<h1>Tipo de z:  '+typeof z+' </h1>'">var z</button>
+        <button onclick="document.getElementById('contenedor').innerHTML='<h1>Valor variable a:'+a+'</h1></br>' +
+         '<h1>Tipo de a:'+typeof a +'</h1>'">var a</button>
+        <button onclick="document.getElementById('contenedor').innerHTML='<h1>Valor de la variable b: ' +b+ '</h1></br>' +
+          '<h1>Tipo de b: '+typeof b+' </h1>'">var b = "2"</button>
+        <button onclick="document.getElementById('contenedor').innerHTML='<h1>Valor de la variable c: ' +c+ '</h1></br>' +
+          '<h1>Tipo de c: '+typeof c+' </h1>'">var c = 3</button>
+        <button onclick="document.getElementById('contenedor').innerHTML='<h1>Valor de la variable suma1: ' +suma1+ '</h1></br>' +
+          '<h1>Tipo de suma1: '+typeof suma1+' </h1>'">suma1= a + b;</button>
+        <button onclick="document.getElementById('contenedor').innerHTML='<h1>Valor de la variable z: ' +z+ '</h1></br>' +
+          '<h1>Tipo de z: '+typeof z+' </h1>'">var z</button>
+<div id="contenedor"></div>
+    </body>
+    </html>
