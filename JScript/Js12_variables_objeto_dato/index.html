@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    #form{
+        background-color: yellow;
+        border: 1px solid black;
+        box-sizing: border-box;
+        padding: 20px;
+    }
+    #bot{
+        background-color: orangered;
+        box-sizing: border-box;
+        padding: 10px;
+
+    }
+    table{
+        border:solid;
+        border-collapse: collapse;
+        display: table;
+    }
+    td ,tr {
+        border:solid;
+        border-collapse: collapse;
+    }
+    h3{
+        margin: 0;
+    }
+</style>
+<body>
+
+<div id="form">
+        <label>
+            <h3>Nombre:</h3>
+            <input type="text" id="nom">
+        </label>
+        <label>
+            <h3>Apellido:</h3>
+            <input type="text" id="ap">
+        </label>
+        <label>
+            <h3>Fecha:</h3>
+            <input type="text" id="fec">
+        </label>
+    <button  id="agregarPersona"  onclick="agregarDatos()">Agregar Persona</button>
+</div>
+
+
+<div id="bot">
+    <h2>Control</h2>
+    <button id="recuadro1" onclick="presion1()">Listar</button>
+    <button id="recuadro2" onclick="ocultar()" >Ocultar presentacion</button>
+</div>
+<div id="longitud">
+<table  id="tab">
+</table>
+</div>
+
+
+<script typeof="text/javascript">
+     arregloPersonas=[];
+    var objetoPersona1 = {nombre:"Patricia",apellido:"Benitez",fechaNac:"01/07/1956"};
+    var objetoPersona2 = {nombre:"Micaela",apellido:"Berzoni",fechaNac:"28/07/2001"};
+    arregloPersonas.push(objetoPersona1);
+    arregloPersonas.push(objetoPersona2);
+     function presion1() {
+         var tabla = document.getElementById('tab')
+         document.getElementById('tab').style.display = "table";
+         tabla.innerHTML = ''; /*reinicia */
+
+    arregloPersonas.forEach(
+        function(objeto) {
+        let fila = document.createElement('tr');
+        tabla.appendChild(fila);
+        Object.values(objeto).forEach(function(atributo){
+            let registro = document.createElement('td');
+            registro.textContent = atributo;
+            fila.appendChild(registro);
+        })
+        })
+
+   let texto =  document.createElement('h3');
+    texto.innerHTML = "Longitud del arreglo de objetos: " + arregloPersonas.length;
+    tabla.appendChild(texto);
+}
+
+function ocultar(){
+    document.getElementById('tab').style.display = "none";
+}
+
+function agregarDatos(){
+        let nombre = document.getElementById('nom').value;
+        let apellido = document.getElementById('ap').value;
+        let fechaNacimiento = document.getElementById('fec').value;
+        let objetoPersona3 = {nombre : nombre, apellido : apellido , fec:fechaNacimiento}
+    arregloPersonas.push(objetoPersona3);
+         alert('Persona agregada correctamente.');
+
+         presion1();
+}
+
+
+
+</script>
+</body>
+</html>
+
