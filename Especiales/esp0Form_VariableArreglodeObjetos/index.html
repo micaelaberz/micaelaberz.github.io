@@ -66,16 +66,16 @@
         <label for="codigo">Codigo flor:
             <input type="number" id="codigo" name="codigo" required>
         </label>
-        <label >Nombre:<input type="text" required>
+        <label >Nombre:<input type="text" name="nombre" required>
         </label>
         <label>Color:
-            <input type="text" >
+            <input type="text" name="color" >
         </label>
         <label> Familia:
-            <select id="familia" onclick="cargarflores()"></select>
+            <select id="familia" onclick="cargarflores()" name="familia"></select>  <!--corregir el select-->
         </label>
         <label>Fecha floración :
-            <input type="date">
+            <input type="date" name="fecha">
         </label>
         <button id="bot" type="submit">Enviar</button>
     </form>
