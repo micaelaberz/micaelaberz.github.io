@@ -84,8 +84,7 @@
 <footer><h2>Pie de pagina</h2></footer>
 <script src="../json_flores.js"></script>
 <script type="text/javascript">
-
-objFlores=JSON.parse(textoFlores);
+    objFlores = JSON.parse(textoFlores);
 var objetoflores = objFlores;
 
 function cargarflores() {
@@ -93,15 +92,16 @@ function cargarflores() {
     familia.innerHTML = ''; /*borra todo para asi volver a cargar de nuevo y q no se repita*/
 
 
-    objetoflores.flores.forEach(function (atributo){
+    objetoflores.flores.forEach(function (atributo) {
         var opcion = document.createElement("option");
-         opcion.value = atributo.codigo;
         opcion.textContent = atributo.codigo;
-        familia.appendChild(opcion);
-    })
-}
+        opcion.value = atributo.codigo;
 
+
+        familia.appendChild(opcion);
+    })};
 </script>
+
 </body>
 
 </html>
