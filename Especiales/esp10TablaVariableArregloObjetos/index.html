@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="esp" xmlns="">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabla dinamica</title>
+</head>
+<style>
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+            font-size: 20px;
+    }
+    html, body {
+        height: 100%;
+    }
+        header{
+            width: 100%;
+            background-color: pink;
+            text-align: center;
+        height:80px;
+
+
+        }
+    footer{
+        position:fixed;
+        width: 100%;
+        height:80px;
+        background-color: pink;
+        text-align: center;
+        margin: 0;
+    }
+
+        th, td {
+            border: 1px solid #000;
+            text-align: center; /* Alineación del texto */
+            width:100px;
+        }
+        .elemento {
+            border: 2px solid #000;
+            background-color:lightsalmon;
+            text-align: center;
+
+
+        }
+        #abla2{
+            margin: 0;
+            height:100vh;
+        }
+
+         #contenedor{
+            overflow: auto;
+             height:70%;
+             margin: 0;
+        }
+
+        table{
+            width: 100%;
+            border-collapse: collapse; /* Colapsa los bordes para que las celdas se vean unidas */
+            margin: 0;
+            border: none; /* Elimina los bordes */
+}
+        button{
+            margin-left:600px;
+            cursor: pointer;
+            background-color: yellow;
+            text-align: center;
+            width:400px;
+        }
+
+        thead tr th{
+            background-color: lightblue;
+            border: none; /* Elimina los bordes */
+            height:60px;
+        }
+
+</style>
+<body>
+<header><h2>Header</h2>
+         <button id="button">Cargar datos</button>
+         <button id="borrar">Borrar datos</button>
+</header>
+
+<table>
+    <thead>
+    <tr>
+        <th><h2>Codigo</h2></th>
+        <th><h2>Nombre</h2></th>
+        <th><h2>Tipo</h2></th>
+        <th><h2>Color</h2></th>
+        <th><h2>Cantidad</h2></th>
+    </tr>
+    </thead>
+    </table>
+<div id="contenedor">
+
+    <table id="abla2" >
+        <tbody id="cuerpo"></tbody>
+    </table>
+</div>
+<footer><h2>Pie de pagina</h2></footer>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script  src="../venta_flores.js"></script> <!--si o si se tiene q usar por separado el script para importar-->
+<script type="text/javascript">
+
+    var objJson=JSON.parse(venta);
+    var objetoflor = objJson.flor;
+
+    $(document).ready(function() { /*esta funcion es para q se ejecute cuando el documento ya se termino de cargar*/
+        $("#button").click(cargartabla)});/*esta funcion es para q ademas de q ya este cargado el dom, se ejecute cn un click*/
+    $(document).ready(function() { /*esta funcion es para q se ejecute cuando el documento ya se termino de cargar*/
+        $("#borrar").click(eliminar)});
+
+function cargartabla(){
+    var body = document.getElementById("cuerpo");
+     body.innerHTML = ''; /*reinicia */
+
+    objetoflor.forEach(function(atributo) { /*func anonima para recorrer el objeto array*/
+        var fila =  document.createElement("tr");
+        body.appendChild(fila);
+        Object.values(atributo).forEach(function(valor){   /*object.values método para obtener un array que contiene los valores de todas las propiedades enumerables de un objeto*/
+            var celda = document.createElement("td");
+            celda.textContent= valor;
+            celda.setAttribute("class","elemento")  /*asigna estilo cn la clase llamada elemento*/
+            fila.appendChild(celda);
+        });
+    });}
+function eliminar(){
+ $("#cuerpo").empty();
+}
+
+</script>
+</body>
+</html>
